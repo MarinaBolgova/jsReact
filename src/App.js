@@ -6,18 +6,19 @@ import Tecnologes from "./Components/Tecnologes/Tecnologes";
 function App() {
   return (
     <div className="App">
-      <NavPanel/>
-      <NavPanel/>
-      <Tecnologes />
 
+        <NavPanel/>
+
+        <Tecnologes/>
     </div>
   );
 }
 
 
-
-
-
-
-
 export default App;
+
+
+
+
+//компонетнта это функция которая возвращает jsx разметку
+//отличие от html имя класса className
