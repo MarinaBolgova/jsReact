@@ -2,14 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import NavPanel from "./Components/NavPanel/NavPanel";
 import Tecnologes from "./Components/Tecnologes/Tecnologes";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+        <NavPanel />
 
-        <NavPanel/>
-
-        <Tecnologes/>
+<BrowserRouter>
+    <Routes>
+                <Route path="/main/*" element={<Tecnologes />}>
+                </Route>
+    </Routes>
+</BrowserRouter>
+        <Tecnologes />
     </div>
   );
 }
