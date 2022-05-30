@@ -1,20 +1,17 @@
 import './NavPanel.css';
 
+import Login_box from "../Login_Box/Login_Box";
+import Logo_Bar from "../Logo_Bar/LogoBar";
+import Nav_Box from "../Nav_Box/Nav_Box";
+
 function NavPanel() {
     return (
         <div className="nav">
-            <div className='Logo_box'>
-                <img src="https://image.shutterstock.com/image-vector/engraving-badge-launch-rocket-vector-600w-1922257916.jpg" alt="LOGO"/>
-            </div>
-            <div className='Nav_box'>
-             <a href=""> Состояние станции </a>
-             <a href="">  </a>
-             <a href=""> Контакты </a>
-             <a href=""> Магазин </a>
-            </div>
-            <div className='Login_box'>
-                <button className="button-9" role="button">Войти в сеть</button>
-            </div>
+            <Logo_Bar />
+
+            <Nav_Box />
+
+            <Login_box />
         </div>
 
 );
