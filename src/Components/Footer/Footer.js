@@ -4,9 +4,14 @@ function Footer() {
     return (
         <div className='Footer'>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+            <ul>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
             </ul>
         </div>
 

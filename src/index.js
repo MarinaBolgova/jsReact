@@ -4,10 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+let inventory={
+       'food':2,
+       'whater':3,
+       'suplices':5,
+}
+let personal={
+    'povar':2,
+    'workers':3,
+}
+function callSend(NewText) {
+    inventory[NewText]=10;
+    console.log(inventory);
+
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App inventory={inventory} personal={personal} callSend={callSend}/>
   </React.StrictMode>
 );
 
