@@ -1,0 +1,6 @@
+.Nav_box{
+  background-color: #99bde5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
