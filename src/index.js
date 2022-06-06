@@ -14,6 +14,13 @@ let personal={
     'povar':2,
     'workers':3,
 }
+
+let users={
+    'name':'IvanPetrov',
+    'pass':'123456',
+
+}
+
 function callSend(NewText) {
     inventory[NewText]=10;
     console.log(inventory);
@@ -23,7 +30,7 @@ function callSend(NewText) {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App inventory={inventory} personal={personal} callSend={callSend}/>
+    <App inventory={inventory} personal={personal} callSend={callSend} users={users}/>
   </React.StrictMode>
 );
 
