@@ -1,37 +1,32 @@
 import './TestProps.css';
 import {useRef} from "react";
+import Inventory_record from "../inventory_record/inventory_record";
 
 
 
 function TestProps(props){
     const Description = useRef(null) //объявляем переменную
+    const val2 = useRef(null)
     let Send=()=>{
-        props.callSend(Description.current.value);
+        props.callSend(Description.current.value, val2.current.value);
         console.log(Description.current.value);
-    }
-
-         console.log(props)
+    };
+    var value_komponents=[];
+    for (var key in props.inventory){
+        value_komponents.push(<Inventory_record name={key} count={props.inventory[key]}/>)
+    };
+        console.log(props);
     return (
         <div className='allign'>
-        <div className='horizont'>
-            <ul>
-                <li>food</li>
-                <li>whater</li>
-                <li>suplices</li>
-            </ul>
-            <ul>
-                 <li>{props.inventory['food']}</li>
-                 <li>{props.inventory['whater']}</li>
-                 <li>{props.inventory['suplices']}</li>
-            </ul>
-        </div>
+            {value_komponents}
+
             <form action="">
 
                 <label>Добавить новый продукт</label>
                 <br/>
-                <input type="text"/>
+                <input ref='val2' type="text"/>
                 <br/>
-                <label>Введите описание:</label>
+                <label>Введите количество:</label>
                 <br/>
                 <textarea ref={Description} rows='4'/>
                 <br/>

@@ -21,18 +21,29 @@ let users={
 
 }
 
-function callSend(NewText) {
-    inventory[NewText]=10;
+function callSend(NewText,NewVal) {
+    inventory[NewVal]=NewText;
+
+
     console.log(inventory);
+    rerender(inventory,callSend)
 
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App inventory={inventory} personal={personal} callSend={callSend} users={users}/>
-  </React.StrictMode>
-);
+
+
+function rerender(data,callSend) {
+
+    root.render(
+        <App inventory={data} callSend={callSend}/>
+    );
+
+
+}
+rerender(inventory,callSend)
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
